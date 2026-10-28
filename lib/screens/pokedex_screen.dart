@@ -53,7 +53,15 @@ class _PokedexScreenState extends State<PokedexScreen> {
                   ? const Center(
                       child: Text('Escribe un nombre y presiona Buscar'),
                     )
-                  : FutureBuilder<Pokemon>(),
+                  : FutureBuilder<Pokemon>(
+                      future: _futuroPokemon,
+                      builder: (context, snapshot) {
+                        // INICIO TODO 3
+                        // TODO 3: mostrar carga, error y éxito
+                        return const Center(child: Text('TODO 3'));
+                        // FIN TODO 3
+                      },
+                    ),
             ),
           ],
         ),
